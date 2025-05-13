@@ -1,7 +1,7 @@
 :root {
   --main-color: #c1dcdc;
   --black: #000;
-  --grey: #1e1e1e8a;
+  --grey: #1e1e1ea9;
   --white: #fff;
   --grey-dark: #1e1e1ed0;
 }
@@ -22,6 +22,20 @@ body {
   max-width: 2300px;
 }
 
+/* Disable deafult styles  */
+a,
+button {
+  all: unset;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Disable deafult styles  */
+li {
+  list-style: none;
+}
+
 section:not(.categories-section),
 header {
   margin-left: 96px;
@@ -38,20 +52,6 @@ section.categories-section {
   margin-right: 0px;
 }
 
-/* Disable deafult styles  */
-a,
-button {
-  all: unset;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Disable deafult styles  */
-li {
-  list-style: none;
-}
-
 ul {
   padding: 0;
 }
@@ -59,6 +59,8 @@ ul {
 header {
   padding-top: 40px;
 }
+
+/* STARTING  */
 
 nav {
   display: flex;
@@ -100,6 +102,11 @@ header h1 {
 .icons-block img {
   width: 23px;
   height: 23px;
+}
+
+/* Hiding the menu button on desktop */
+.icons-block button:last-child {
+  display: none;
 }
 
 /* SECTIONS  */
@@ -375,7 +382,7 @@ input::placeholder {
   width: 100%;
 }
 
-.category-card h5 {
+.category-card p {
   font-size: 18px;
   font-weight: bold;
 }
@@ -557,6 +564,10 @@ footer {
   margin-top: 110px;
 }
 
+.copy-right a {
+  font-weight: bold;
+}
+
 /* when screem : mobile  */
 @media (max-width: 768px) {
   section:not(.categories-section),
@@ -623,6 +634,10 @@ footer {
   .content-wrapper button span {
     font-size: 12px;
   }
+
+  .icons-block button:last-child {
+    display: block;
+  }
 }
 
 /* when screem : md  */
@@ -680,5 +695,9 @@ footer {
 
   .item-wrapper img {
     height: 250px;
+  }
+
+  .copy-right {
+    font-size: 14px;
   }
 }
